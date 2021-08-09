@@ -1,4 +1,9 @@
 
+(defpackage :utils
+  (:use :cl))
+
+(in-package :utils)
+
 (defclass gaussiandb () ((mean :initform nil
 			       :initarg :mean
 			       :accessor gaussiandb-mean)
@@ -18,7 +23,6 @@
 	(+    (* c
 	      (sin (* 2.0 pi (double-random)))
 	      (gaussiandb-var gs))
-	      
 	      (gaussiandb-mean gs))
 	(+    (* c
 	      (cos (* 2.0 pi (double-random)))
